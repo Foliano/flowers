@@ -13,8 +13,8 @@
     "startElectron": "electron .",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "electron:mac": "electron-packager ./electron perfectMaze --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
-    "electron:win": "electron-packager ./electron perfectMaze --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='Perfect Maze App'"
+    "electron:mac": "electron-packager ./electron calendarApp --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "electron:win": "electron-packager ./electron calendarApp --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='calendarApp'"
   },
   "private": true,
   "dependencies": {
@@ -34,7 +34,9 @@
     "node-gyp": "^7.1.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.10.3",
+    "electron": "^11.2.0",
+    "electron-packager": "^15.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1002.1",
@@ -47,8 +49,6 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "electron": "^11.2.0",
-    "electron-packager": "^15.2.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -58,7 +58,12 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "typescript": "~3.9.5"
+    "typescript": "~3.9.5",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54"
   },
   "description": "An Ionic project",
   "config": {
@@ -68,7 +73,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "perfect_maze"
+            "name": "rememberTheFlowers"
           }
         },
         {

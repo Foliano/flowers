@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "remember the flowers",
+  "appName": "rememberTheFlowers",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
