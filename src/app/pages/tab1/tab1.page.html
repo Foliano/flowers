@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista powiadomień</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let flower of flowers$ | async">
+    <ion-card-content>
+      {{ flower.name }}, {{flower.room}}
+      <span class="ion-float-right"
+        >{{flower | frequency}}</span
+      ></ion-card-content
+    >
+  </ion-card>
+</ion-content>

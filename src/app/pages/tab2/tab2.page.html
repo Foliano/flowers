@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista kwiatków</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-row>
+    <ion-col *ngFor="let flower of flowers$ | async">
+      <ion-card [routerLink]="'/tabs/edit/' + flower.id">
+        <ion-img
+          src="data:image/{{flower.picture.format}};base64,{{flower.picture.data}}"
+        ></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle [innerText]="flower.room"></ion-card-subtitle>
+          <ion-card-title [innerText]="flower.name"></ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

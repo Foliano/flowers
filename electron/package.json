@@ -1,0 +1,33 @@
+{
+  "name": "remember the flowers",
+  "version": "1.0.0",
+  "description": "An Amazing Capacitor App",
+  "main": "index.js",
+  "scripts": {
+    "electron:start": "electron ./"
+  },
+  "dependencies": {
+    "@capacitor/electron": "^2.4.6",
+    "electron-is-dev": "^1.1.0"
+  },
+  "devDependencies": {
+    "electron": "11.0.0-beta.20",
+    "electron-builder": "^22.9.1"
+  },
+  "keywords": [
+    "capacitor",
+    "electron"
+  ],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "test",
+    "mac": {
+      "target": {
+        "target": "dir",
+        "arch": "arm64"
+      }
+    }
+  }
+}
+
